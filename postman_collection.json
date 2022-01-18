@@ -1,0 +1,393 @@
+{
+	"info": {
+		"_postman_id": "1a03e251-2e4d-4774-af97-055aa85fad09",
+		"name": "Simple CRUD app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/item",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"item"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Items",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/item",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"item"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jan 2022 18:11:56 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "352"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"jade pendant\",\n        \"id\": \"1\",\n        \"quantity\": 17,\n        \"unit_price\": 15.4\n    },\n    {\n        \"name\": \"casual shoes\",\n        \"id\": \"2\",\n        \"quantity\": 2,\n        \"unit_price\": 65.58\n    },\n    {\n        \"name\": \"fluorescent pen\",\n        \"id\": \"3\",\n        \"quantity\": 119,\n        \"unit_price\": 21.77\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Post Item",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"4\",\r\n    \"name\": \"chess\",\r\n    \"unit_price\": 99.99,\r\n    \"quantity\": 7\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/item",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"item"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post Item",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"4\",\r\n    \"name\": \"chess\",\r\n    \"unit_price\": 99.99,\r\n    \"quantity\": 7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/item",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"item"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jan 2022 18:12:40 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"chess\",\n    \"id\": \"4\",\n    \"quantity\": 7,\n    \"unit_price\": 99.99\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Item by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "Get Item By ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/item/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"item",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jan 2022 18:12:45 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "89"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"jade pendant\",\n    \"id\": \"1\",\n    \"quantity\": 17,\n    \"unit_price\": 15.4\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Item by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/item/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"item",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Item by ID",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/item/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"item",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jan 2022 18:12:51 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Update Item by ID",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test\",\r\n    \"quantity\": 1,\r\n    \"unit_price\": 1.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/item/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"item",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Item by ID",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test\",\r\n    \"quantity\": 1,\r\n    \"unit_price\": 1.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/item/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"item",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jan 2022 18:13:11 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "77"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"test\",\n    \"id\": \"2\",\n    \"quantity\": 1,\n    \"unit_price\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Items CSV",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/item/csv",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"item",
+						"csv"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Items CSV",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/item/csv",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"item",
+								"csv"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes"
+						},
+						{
+							"key": "Content-Disposition",
+							"value": "attachment; filename=\"itemlist.csv\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/csv; charset=utf-8"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Tue, 18 Jan 2022 18:13:18 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jan 2022 18:13:18 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "Name,ID,Quantity,UnitPrice\ntest,2,1,1\nfluorescent pen,3,119,21.77\nchess,4,7,99.99\n"
+				}
+			]
+		}
+	]
+}
